@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  php7.3:
+    image: quay.io/vesica/php73:latest
+    container_name: php7.3
+    volumes:
+      - ./www:/var/www/html
+      - ./etc/apache:/etc/apache2
+    ports:
+      - 81:8080
+networks:
+  default:
+    external:
+      name: mysq-network      
+   
+    
+
+     
+
