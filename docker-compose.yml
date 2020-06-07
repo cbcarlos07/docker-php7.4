@@ -7,11 +7,11 @@ services:
       - ./www:/var/www/html
       - ./etc/apache:/etc/apache2
     ports:
-      - 81:8080
+      - 80:80
 networks:
   default:
     external:
-      name: mysq-network      
+      name: mysql-network      
    
     
 
