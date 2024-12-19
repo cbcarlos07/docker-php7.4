@@ -1,19 +1,10 @@
-version: "3.3"
+
 services:
-  php7.3:
-    image: quay.io/vesica/php73:latest
-    container_name: php7.3
+  php7.4:
+    build: .
+    container_name: php7.4
     volumes:
       - ./www:/var/www/html
-      - ./etc/apache:/etc/apache2
+      - ./php/php.ini:/usr/local/etc/php/php.ini:ro
     ports:
       - 80:80
-networks:
-  default:
-    external:
-      name: mysql-network      
-   
-    
-
-     
-
